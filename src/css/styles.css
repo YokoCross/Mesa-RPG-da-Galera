@@ -144,6 +144,9 @@ table {
 .themeButtons-button:focus {
   outline: none; }
 
+.themeButtons-button:active {
+  transform: scale(1.05); }
+
 .themeButtons-esgal {
   background: url("../img/esgal.png");
   background-repeat: no-repeat;
