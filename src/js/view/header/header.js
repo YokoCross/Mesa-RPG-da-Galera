@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux'
+
 import * as CourseActions from '../../store/actions/toggleNavbarVisible'
+import { LinkWrapper } from '../../utils/linkWarpper/linkWrapper'
+import { urls } from '../../utils/urls/urls'
 
 const Header = ({ navbarVisible, toggleNavbarVisible }) => {
 
@@ -12,14 +15,14 @@ const Header = ({ navbarVisible, toggleNavbarVisible }) => {
                     className='header-button-hamburguer'
                     onClick={() => toggleNavbarVisible(navbarVisible)}
                 />
-                <h1 className='header-h1'>RPG da Galera</h1>
+                <h1 className='header-h1'><LinkWrapper className='header-Link' to={urls.inicialButtons.path}>RPG da Galera</LinkWrapper></h1>
             </div>
 
             <nav className={`${navbarVisible} `} id='header-nav'>
                 <ul className='header-ul'>
-                    <li>Home</li>
-                    <li>History</li>
-                    <li>Talk to me</li>
+                    <li><LinkWrapper className='header-Link' to={urls.inicialButtons.path}>Home</LinkWrapper></li>
+                    <li><LinkWrapper className='header-Link' to={urls.history.path}>History</LinkWrapper></li>
+                    <li><LinkWrapper className='header-Link' to={urls.contact.path}>Talk to me</LinkWrapper></li>
                 </ul>
             </nav>
         </header>

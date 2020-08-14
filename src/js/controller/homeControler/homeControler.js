@@ -4,6 +4,8 @@ import { Route } from 'react-router-dom'
 import { urls } from '../../utils/urls/urls'
 import ThemeButtons from '../../view/themesButtons/themeButtons'
 import LoginOrCreate from '../../view/loginOrCreate/loginOrCreate'
+import History from '../../view/history/history'
+import Contact from '../../view/contact/contact'
 
 class HomeControler extends Component {
     render() {
@@ -18,6 +20,16 @@ class HomeControler extends Component {
                     exact
                     path={urls.loginOrCreate.path}
                     render={() => <LoginOrCreate />}
+                />
+                <Route
+                    exact
+                    path={urls.history.path}
+                    render={() => <History />}
+                />
+                <Route
+                    exact
+                    path={urls.contact.path}
+                    render={() => <Contact />}
                 />
 
             </div>

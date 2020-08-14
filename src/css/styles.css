@@ -96,6 +96,10 @@ table {
   .header-button-hamburguer:active {
     transform: scale(1.1); }
 
+.header-Link {
+  text-decoration: none;
+  color: white; }
+
 .header-h1 {
   font-size: 2rem;
   padding: .5rem 0; }
