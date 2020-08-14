@@ -1,3 +1,3 @@
 export const urls = {
-    inicialButtons: { name: 'Principal', path: '/' },    
+    inicialButtons: { name: 'Principal', path: '/' },        
 };

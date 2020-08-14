@@ -22,7 +22,22 @@ $screen-computer: 800px;
     background: url('../img/fundo-princial.jpg');
     background-position: center;
     background-size: 2550px;
-    background-color: red;
     overflow: hidden;
-    opacity: 60%;
+}
+
+.global-container{    
+    background-color: #ffffffe1;   
+    min-height: 700px;
+    margin: 0 auto;
+    max-width: 900px;
+    @media (min-width:$screen-tablet) {
+        width: 80%;
+    }
+}
+
+.global-title{
+   font-family: $font-one;
+   text-align: center;
+   font-size: 2rem;
+   padding: 2rem 0;
 }
