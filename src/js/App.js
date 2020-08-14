@@ -5,7 +5,11 @@ import HeaderControler from './controller/headerControler/headerControler'
 
 function App() {
   return (
-    <HeaderControler />
+    <>
+      <HeaderControler />
+      <div className='global-body'>
+      </div>      
+    </>
   );
 }
 

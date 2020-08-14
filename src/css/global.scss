@@ -1,10 +1,28 @@
 
+//Font Imports
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+//Colors
 $color-one:#222222;
 $color-two:#ffffffee;
 
+//Fonts
 $font-one:'Montserrat', sans-serif;
 
+//Responsive min-values
+$screen-tablet:500px;
+$screen-computer: 800px;
+
+//util Classes
 .display-none{
-    display: none !important;
+    display: none;
+}
+
+.global-body{
+    background: url('../img/fundo-princial.jpg');
+    background-position: center;
+    background-size: 2550px;
+    background-color: red;
+    overflow: hidden;
+    opacity: 60%;
 }

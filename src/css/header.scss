@@ -1,10 +1,13 @@
 .header-main {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: $color-one;
     color: $color-two;
     font-family: $font-one;
+    z-index: 10;
 }
 
 .header-div-flex {
@@ -28,7 +31,7 @@
         outline: none;
     }
 
-    &:active{
+    &:active {
         transform: scale(1.1);
     }
 }
@@ -46,5 +49,29 @@
     li {
         font-size: 1.4rem;
         padding: .3rem 0;
-    }    
+    }
+}
+
+@media (min-width:$screen-computer) {
+
+    .header-main{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .header-button-hamburguer{
+        display: none;
+    }
+
+    #header-nav {
+        display: block;
+    }
+
+    .header-ul{
+        flex-direction: row;
+        li{
+            padding: 0 1rem;
+        }
+    }
 }

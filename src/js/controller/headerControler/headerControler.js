@@ -1,18 +1,17 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import { Header } from '../../view/header/header'
 
 export default class HeaderControler extends Component {
 
     state={
-        navbarVisible: 'none'
+        navbarVisible: 'display-none'
     }
 
     toggleNavbarVisible = () =>{
-        console.log('foi');
-        if(this.state.navbarVisible === 'none') 
-        this.setState({navbarVisible:'flex'})
+        if(this.state.navbarVisible === 'display-none') 
+        this.setState({navbarVisible:''})
         else
-        this.setState({navbarVisible:'none'})
+        this.setState({navbarVisible:'display-none'})
     }
 
     render() {
