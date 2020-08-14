@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 export class LoginOrCreate extends Component {
     render() {
         return (
-            <div>
-                oi
-            </div>
+            <section>
+                login or create
+            </section>
         )
     }
 }

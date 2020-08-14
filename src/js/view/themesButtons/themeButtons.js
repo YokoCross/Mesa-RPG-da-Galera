@@ -15,7 +15,7 @@ const ThemeButtons = ({ characterActions }) => {
                     <button
                         className='themeButtons-button themeButtons-esgal'
                         onClick={() => characterActions('esgal')}
-                    >Esgal <br /> A Terra dos Exilalados
+                    >Esgal <br /> A Terra dos Exilados
                     </button>
                 </LinkWrapper>
                 <LinkWrapper to={urls.loginOrCreate.path}>
