@@ -1,14 +1,15 @@
 import React from 'react'
+
 import '../css/styles.css'
-import HeaderControler from './controller/headerControler/headerControler'
+import Header from './view/header/header'
 
 
 function App() {
   return (
     <>
-      <HeaderControler />
+      <Header />
       <div className='global-body'>
-      </div>      
+      </div>
     </>
   );
 }
