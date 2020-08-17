@@ -1,4 +1,3 @@
-
 //Font Imports
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -7,37 +6,41 @@ $color-one:#222222;
 $color-two:#ffffffee;
 
 //Fonts
-$font-one:'Montserrat', sans-serif;
+$font-one:'Montserrat',
+sans-serif;
 
 //Responsive min-values
 $screen-tablet:500px;
 $screen-computer: 800px;
 
 //util Classes
-.display-none{
+.display-none {
     display: none;
 }
 
-.global-body{
+.global-body {
     background: url('../img/fundo-princial.jpg');
     background-position: center;
     background-size: 2550px;
     overflow: hidden;
 }
 
-.global-container{    
-    background-color: #ffffffe1;   
+.global-container {
+    background-color: #ffffffe1;
     min-height: 700px;
     margin: 0 auto;
     max-width: 900px;
+
     @media (min-width:$screen-tablet) {
         width: 80%;
+        box-shadow: 1px 1px 3px 3px rgba($color: #000000, $alpha: .1),
+            -1px -1px 3px 3px rgba($color: #000000, $alpha: .1);
     }
 }
 
-.global-title{
-   font-family: $font-one;
-   text-align: center;
-   font-size: 2rem;
-   padding: 2rem 0;
+.global-title {
+    font-family: $font-one;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 0;
 }
