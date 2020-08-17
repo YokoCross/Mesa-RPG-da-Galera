@@ -6,7 +6,7 @@ import ThemeButtons from '../../view/themesButtons/themeButtons'
 import LoginOrCreate from '../../view/loginOrCreate/loginOrCreate'
 import History from '../../view/history/history'
 import Contact from '../../view/contact/contact'
-import EsgalCreation from '../../view/creationViews/esgalCreation'
+import EsgalCreation from '../../view/creationViews/esgalCreation/esgalCreation'
 import CrimmahCreation from '../../view/creationViews/crimmahCreation'
 import YggdrasilCreation from '../../view/creationViews/yggdrasilCreation'
 

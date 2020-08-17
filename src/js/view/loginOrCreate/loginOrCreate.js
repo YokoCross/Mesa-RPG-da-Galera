@@ -21,6 +21,7 @@ const LoginOrCreate = ({ searchingName, chosenWorld }) => {
                     <input
                         className='global-input'
                         id='name-search'
+                        type='text'
                         onChange={event => setWantedName(event.target.value)}
                     ></input>
                     <button
