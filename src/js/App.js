@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <div className='global-body'>
-        <HomeControler></HomeControler>
+        <HomeControler/>
       </div>
     </>
   );

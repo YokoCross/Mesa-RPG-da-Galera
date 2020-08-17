@@ -6,6 +6,9 @@ import ThemeButtons from '../../view/themesButtons/themeButtons'
 import LoginOrCreate from '../../view/loginOrCreate/loginOrCreate'
 import History from '../../view/history/history'
 import Contact from '../../view/contact/contact'
+import EsgalCreation from '../../view/creationViews/esgalCreation'
+import CrimmahCreation from '../../view/creationViews/crimmahCreation'
+import YggdrasilCreation from '../../view/creationViews/yggdrasilCreation'
 
 class HomeControler extends Component {
     render() {
@@ -30,6 +33,21 @@ class HomeControler extends Component {
                     exact
                     path={urls.contact.path}
                     render={() => <Contact />}
+                />
+                <Route
+                    exact
+                    path={urls.esgalCreation.path}
+                    render={() => <EsgalCreation />}
+                />
+                <Route
+                    exact
+                    path={urls.crimmahCreation.path}
+                    render={() => <CrimmahCreation />}
+                />
+                <Route
+                    exact
+                    path={urls.yggdrasilCreation.path}
+                    render={() => <YggdrasilCreation />}
                 />
 
             </div>

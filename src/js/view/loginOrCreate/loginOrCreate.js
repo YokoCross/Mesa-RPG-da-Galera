@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
 import * as CourseActions from '../../store/actions/characterActions'
+import { LinkWrapper } from '../../utils/linkWarpper/linkWrapper'
 
-const LoginOrCreate = ({searchingName}) => {
+const LoginOrCreate = ({ searchingName, chosenWorld }) => {
 
     const [wantedName, setWantedName] = useState('');
-
+    console.log(chosenWorld);
     return (
         <section className='login-or-create-section'>
 
@@ -17,20 +18,22 @@ const LoginOrCreate = ({searchingName}) => {
                 <div className='login-or-create-name-search-flex'>
 
                     <label className='global-label' htmlFor='name-search'>Qual o nome do seu personagem?</label>
-                    <input 
-                    className='global-input' 
-                    id='name-search'
-                    onChange={ event => setWantedName(event.target.value)}
+                    <input
+                        className='global-input'
+                        id='name-search'
+                        onChange={event => setWantedName(event.target.value)}
                     ></input>
-                    <button 
-                    onClick={()=> searchingName(wantedName)}
-                    className='global-button' >Buscar personagem</button>
+                    <button
+                        onClick={() => searchingName(wantedName)}
+                        className='global-button' >Buscar personagem</button>
 
                 </div>
 
                 <div className='login-or-create-new-character-flex'>
                     <label className='global-label'>Qual o nome do seu personagem?</label>
-                    <button className='global-button' >Criar novo personagem</button>
+                    <LinkWrapper to={`/${chosenWorld}Creation`}>
+                        <button className='global-button' >Criar novo personagem</button>
+                    </LinkWrapper>
                 </div>
             </div>
         </section>
@@ -39,14 +42,14 @@ const LoginOrCreate = ({searchingName}) => {
 }
 
 const mapStateToProps = (state) => ({
-
+    chosenWorld:state.charactersStore.chosenWorld
 })
 
-const mapDispatchToProps = dispatch =>({
-    searchingName:(wantedName) => 
-    dispatch(CourseActions.searchingName(wantedName))
+const mapDispatchToProps = dispatch => ({
+    searchingName: (wantedName) =>
+        dispatch(CourseActions.searchingName(wantedName))
 
-    
+
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginOrCreate)
