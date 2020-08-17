@@ -4,3 +4,10 @@ export function changingWorld (world){
         world,
     }
 }
+
+export function searchingName (name){
+    return{
+        type:'SEARCHING_NAME',
+        name,
+    }
+}

@@ -66,6 +66,32 @@ table {
   font-size: 2rem;
   padding: 2rem 0; }
 
+.global-label {
+  font-family: "Montserrat", sans-serif; }
+
+.global-input {
+  font-family: "Montserrat", sans-serif;
+  height: 2rem;
+  min-width: 15rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem; }
+
+.global-button {
+  font-family: "Montserrat", sans-serif;
+  height: 2rem;
+  margin-top: 1.5rem;
+  padding: 0 2rem; }
+
+.global-button:hover {
+  color: #f19224; }
+
+.global-button:focus {
+  outline: none; }
+
+.global-button:active {
+  transform: scale(1.05); }
+
 .header-main {
   position: sticky;
   top: 0;
@@ -169,5 +195,26 @@ table {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 300px; }
+
+.login-or-create-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.login-or-create-name-search-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.login-or-create-content-fex {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.login-or-create-new-character-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem; }
 
 /*# sourceMappingURL=styles.css.map */

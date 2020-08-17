@@ -18,6 +18,7 @@ $screen-computer: 800px;
     display: none;
 }
 
+//pattern-classes
 .global-body {
     background: url('../img/fundo-princial.jpg');
     background-position: center;
@@ -43,4 +44,36 @@ $screen-computer: 800px;
     text-align: center;
     font-size: 2rem;
     padding: 2rem 0;
+}
+
+.global-label{
+    font-family: $font-one;
+}
+
+.global-input{
+    font-family: $font-one;
+    height: 2rem;
+    min-width: 15rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.global-button{
+    font-family: $font-one;
+    height: 2rem;
+    margin-top: 1.5rem;
+    padding: 0 2rem;
+}
+
+.global-button:hover{
+    color:#f19224;
+}
+
+.global-button:focus{
+    outline: none;
+}
+
+.global-button:active{
+    transform: scale(1.05);
 }
