@@ -27,6 +27,10 @@ export default function charatersStore(state = CHARATERS_STATE, action) {
     if (action.type === 'SEARCHING_NAME') {
         return { ...state, wantedName: action.name }
     }
+    
+    if (action.type === 'CHOOSING_NAME') {
+        return { ...state, characterCreated: { ...state.characterCreated, name: action.name }}
+    }
 
     if (action.type === 'CHOOSING_RACE') {
         return { ...state, characterCreated: { ...state.characterCreated, race: action.name }, racaChosen: 'display-none', classChosen: 'esgalCreation-input-flex' }

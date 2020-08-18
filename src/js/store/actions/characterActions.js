@@ -12,6 +12,13 @@ export function searchingName(name) {
     }
 }
 
+export function choosingName(name) {
+    return {
+        type: 'CHOOSING_NAME',
+        name,
+    }
+}
+
 export function choosingRace(event, name) {
     event.preventDefault()
     return {

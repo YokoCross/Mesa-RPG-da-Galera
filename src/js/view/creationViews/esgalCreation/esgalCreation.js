@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 import * as CourseActions from '../../../store/actions/characterActions'
 
-const EsgalCreation = ({ classes, skills, racaChosen, classChosen, skillschosen, submitbutton, choosingRace, choosingClass, choosingSkills }) => {
+const EsgalCreation = ({ classes, skills, name, racaChosen, classChosen, skillschosen, submitbutton, choosingName, choosingRace, choosingClass, choosingSkills }) => {
 
-    const [name, setName] = useState('')
-
+    
     return (
         <section>
             <h2 className='global-title'>Criação de Personagem</h2>
             <form className='esgalCreation-form'>
                 <div className='esgalCreation-input-flex'>
                     <label className='global-label' htmlFor='character-name'>Nome do Personagem</label>
-                    <input required value={name} onChange={event => setName(event.target.value)} className='global-input' id='character-name'></input>
+                    <input required onChange={event => choosingName(event.target.value)} className='global-input' id='character-name'></input>
                 </div>
 
                 <div className={racaChosen}>
@@ -71,6 +70,7 @@ const EsgalCreation = ({ classes, skills, racaChosen, classChosen, skillschosen,
 }
 
 const mapStateToProps = (state) => ({
+    name: state.charactersStore.characterCreated.name,
     classes: state.classesStore.classes,
     skills: state.classesStore.skills,
     racaChosen: state.charactersStore.racaChosen,
@@ -88,6 +88,9 @@ const mapDispatchToProps = dispatch => ({
 
     choosingSkills: (event, value) =>
         dispatch(CourseActions.choosingSkills(event, value)),
+
+    choosingName: name =>
+        dispatch(CourseActions.choosingName(name)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EsgalCreation)
