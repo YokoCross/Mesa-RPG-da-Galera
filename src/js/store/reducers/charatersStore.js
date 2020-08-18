@@ -10,11 +10,7 @@ const CHARATERS_STATE = {
         name: '',
         race: '',
         class: '',
-        skills: {
-            skillOne: '',
-            skillTwo: '',
-            skillThree: '',
-        },
+        skills:[],
         status: '',
         titles: [],
         itens: [],
@@ -39,21 +35,29 @@ export default function charatersStore(state = CHARATERS_STATE, action) {
     if (action.type === 'CHOOSING_CLASS') {
         return { ...state, characterCreated: { ...state.characterCreated, class: action.value }, classChosen: 'display-none', skillschosen: 'esgalCreation-input-flex' }
     }
-
+    
     if (action.type === 'CHOOSING_SKILLS') {
         switch (state.skillschosenCount) {
             case 0:
-                return { ...state, characterCreated: { ...state.characterCreated, skills: { ...state.skills, skillOne: action.value } }, skillschosenCount: 1 }
+                let array = state.characterCreated.skills
+                array.push(action.value)
+                return { ...state, characterCreated: { ...state.characterCreated, skills: array }, skillschosenCount: 1 }
             case 1:
-                return { ...state, characterCreated: { ...state.characterCreated, skills: { ...state.skills, skillTwo: action.value } }, skillschosenCount: 2 }
+                let array2 = state.characterCreated.skills
+                array2.push(action.value)
+                return { ...state, characterCreated: { ...state.characterCreated, skills: array2 }, skillschosenCount: 2 }
             case 2:
-                return { ...state, characterCreated: { ...state.characterCreated, skills: { ...state.skills, skillThree: action.value } }, skillschosenCount: 3 }
+                let array3 = state.characterCreated.skills
+                array3.push(action.value)
+                return { ...state, characterCreated: { ...state.characterCreated, skills: array3 }, skillschosenCount: 3 }
             case 3:
-                return { ...state, characterCreated: { ...state.characterCreated, skills: { ...state.skills, skillThree: action.value } }, skillschosenCount: 4 }
+                let array4 = state.characterCreated.skills
+                array4.push(action.value)
+                return { ...state, characterCreated: { ...state.characterCreated, skills: array4 }, skillschosenCount: 4 }
             case 4:
-                return { ...state, characterCreated: { ...state.characterCreated, skills: { ...state.skills, skillThree: action.value } }, skillschosenCount: 5 }
-            case 5:
-                return { ...state, characterCreated: { ...state.characterCreated, skills: { ...state.skills, skillThree: action.value } }, skillschosen: 'display-none', submitbutton:'global-button esgalCreation-button-submit'  }
+                let array5 = state.characterCreated.skills
+                array5.push(action.value)
+                return { ...state, characterCreated: { ...state.characterCreated, skills: array5 }, skillschosen: 'display-none', submitbutton:'global-button esgalCreation-button-submit' }
             default:
                 return null
         }
