@@ -5,6 +5,7 @@ const CHARATERS_STATE = {
     classChosen: 'display-none',
     skillschosen: 'display-none',
     skillschosenCount: 0,
+    submitbutton:'display-none',
     characterCreated: {
         name: '',
         race: '',
@@ -52,7 +53,7 @@ export default function charatersStore(state = CHARATERS_STATE, action) {
             case 4:
                 return { ...state, characterCreated: { ...state.characterCreated, skills: { ...state.skills, skillThree: action.value } }, skillschosenCount: 5 }
             case 5:
-                return { ...state, characterCreated: { ...state.characterCreated, skills: { ...state.skills, skillThree: action.value } }, skillschosen: 'display-none' }
+                return { ...state, characterCreated: { ...state.characterCreated, skills: { ...state.skills, skillThree: action.value } }, skillschosen: 'display-none', submitbutton:'global-button esgalCreation-button-submit'  }
             default:
                 return null
         }

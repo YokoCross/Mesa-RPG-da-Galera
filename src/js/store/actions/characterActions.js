@@ -30,7 +30,7 @@ export function choosingClass(event, value) {
 
 export function choosingSkills(event, value) {
     event.preventDefault()
-    console.log(value);
+    event.target.setAttribute('class', 'display-none')
     return {
         type: 'CHOOSING_SKILLS',
         value,

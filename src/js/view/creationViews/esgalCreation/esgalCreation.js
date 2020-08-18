@@ -3,14 +3,14 @@ import { connect } from 'react-redux'
 
 import * as CourseActions from '../../../store/actions/characterActions'
 
-const EsgalCreation = ({ classes, skills, racaChosen, classChosen, skillschosen, choosingRace, choosingClass, choosingSkills }) => {
+const EsgalCreation = ({ classes, skills, racaChosen, classChosen, skillschosen, submitbutton, choosingRace, choosingClass, choosingSkills }) => {
 
     const [name, setName] = useState('')
 
     return (
         <section>
             <h2 className='global-title'>Criação de Personagem</h2>
-            <form>
+            <form className='esgalCreation-form'>
                 <div className='esgalCreation-input-flex'>
                     <label className='global-label' htmlFor='character-name'>Nome do Personagem</label>
                     <input required value={name} onChange={event => setName(event.target.value)} className='global-input' id='character-name'></input>
@@ -47,11 +47,13 @@ const EsgalCreation = ({ classes, skills, racaChosen, classChosen, skillschosen,
                     <div className='esgalCreation-button-skills-flex'>
                         {
                             skills.map(skill => {
+
                                 return (
                                     <button
                                         className={`esgalCreation-button-skill ${skill.skillAtribute}`}
                                         key={skill.skilName}
                                         onClick={(event) => choosingSkills(event, skill.skilName)}
+                                        id={skill.skilName.replace(/\s/g, '')}
                                     >
                                         {skill.skilName}
                                     </button>
@@ -61,7 +63,7 @@ const EsgalCreation = ({ classes, skills, racaChosen, classChosen, skillschosen,
                     </div>
                 </div>
 
-                <button type='submit'>Criar personagem</button>
+                <button type='submit' className={submitbutton}>Criar personagem</button>
             </form>
         </section>
     )
@@ -74,6 +76,7 @@ const mapStateToProps = (state) => ({
     racaChosen: state.charactersStore.racaChosen,
     classChosen: state.charactersStore.classChosen,
     skillschosen: state.charactersStore.skillschosen,
+    submitbutton: state.charactersStore.submitbutton,
 })
 
 const mapDispatchToProps = dispatch => ({

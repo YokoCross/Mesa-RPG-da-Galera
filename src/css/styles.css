@@ -217,6 +217,11 @@ table {
   flex-direction: column;
   margin-top: 2rem; }
 
+.esgalCreation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .esgalCreation-input-flex {
   display: flex;
   flex-direction: column;
@@ -234,6 +239,9 @@ table {
 .esgalCreation-button-skill {
   height: 3rem;
   min-width: 140px;
+  margin-top: 2rem; }
+
+.esgalCreation-button-submit {
   margin-top: 2rem; }
 
 .magico {
