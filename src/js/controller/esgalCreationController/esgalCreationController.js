@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import * as CourseActions from '../../../store/actions/characterActions'
+import * as CourseActions from '../../store/actions/characterActions'
 
-const EsgalCreation = ({ classes, skills, name, racaChosen, classChosen, skillschosen, submitbutton, choosingName, choosingRace, choosingClass, choosingSkills }) => {
+const EsgalCreationController = ({ charactersStore, classesStore, choosingName, choosingRace, choosingClass, choosingSkills }) => {
 
-    
+
     return (
         <section>
             <h2 className='global-title'>Criação de Personagem</h2>
@@ -15,7 +15,7 @@ const EsgalCreation = ({ classes, skills, name, racaChosen, classChosen, skillsc
                     <input required onChange={event => choosingName(event.target.value)} className='global-input' id='character-name'></input>
                 </div>
 
-                <div className={racaChosen}>
+                <div className={charactersStore.racaChosen}>
                     <label className='global-label' >Raça do Personagem</label>
                     <div className='esgalCreation-button-skills-flex'>
                         <button onClick={(event) => choosingRace(event, 'Anão')} className='esgalCreation-button-skill'>Anão</button>
@@ -24,11 +24,11 @@ const EsgalCreation = ({ classes, skills, name, racaChosen, classChosen, skillsc
                     </div>
                 </div>
 
-                <div className={classChosen}>
+                <div className={charactersStore.classChosen}>
                     <label className='global-label' >Classe do Personagem</label>
                     <div className='esgalCreation-button-skills-flex'>
                         {
-                            classes.map(classe => {
+                            classesStore.classes.map(classe => {
                                 return (
                                     <button
                                         className='esgalCreation-button-skill'
@@ -41,11 +41,11 @@ const EsgalCreation = ({ classes, skills, name, racaChosen, classChosen, skillsc
                         }
                     </div>
                 </div>
-                <div className={skillschosen}>
+                <div className={charactersStore.skillschosen}>
                     <label className='global-label' >Classe do Personagem</label>
                     <div className='esgalCreation-button-skills-flex'>
                         {
-                            skills.map(skill => {
+                            classesStore.skills.map(skill => {
 
                                 return (
                                     <button
@@ -62,7 +62,7 @@ const EsgalCreation = ({ classes, skills, name, racaChosen, classChosen, skillsc
                     </div>
                 </div>
 
-                <button type='submit' className={submitbutton}>Criar personagem</button>
+                <button type='submit' className={charactersStore.submitbutton}>Criar personagem</button>
             </form>
         </section>
     )
@@ -70,13 +70,9 @@ const EsgalCreation = ({ classes, skills, name, racaChosen, classChosen, skillsc
 }
 
 const mapStateToProps = (state) => ({
-    name: state.charactersStore.characterCreated.name,
-    classes: state.classesStore.classes,
-    skills: state.classesStore.skills,
-    racaChosen: state.charactersStore.racaChosen,
-    classChosen: state.charactersStore.classChosen,
-    skillschosen: state.charactersStore.skillschosen,
-    submitbutton: state.charactersStore.submitbutton,
+
+    classesStore: state.classesStore,
+    charactersStore: state.charactersStore,
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -93,4 +89,4 @@ const mapDispatchToProps = dispatch => ({
         dispatch(CourseActions.choosingName(name)),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(EsgalCreation)
+export default connect(mapStateToProps, mapDispatchToProps)(EsgalCreationController)
