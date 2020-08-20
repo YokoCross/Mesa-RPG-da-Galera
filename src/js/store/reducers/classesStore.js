@@ -6,6 +6,7 @@ const SKILLS_CLASSES = {
                 skillName: 'Nobreza Diplomatica',
                 skillDescription: 'nivel 1~3 oferece vantagens por sua posição social'
             },
+            classType: 1,
             classDescription: 'Guerreiro nomeado pelo rei Bruxo para Servir nas defesas do Reino',
             equipamento: 'Armadura pesada e Espada de duas Mãos',
         },
@@ -15,6 +16,7 @@ const SKILLS_CLASSES = {
                 skillName: 'Conhecimento da Floresta',
                 skillDescription: 'nivel 1~3 oferece vantagens ao andar por florestas'
             },
+            classType: 2,
             classDescription: 'Um andarilho que viveu nas florestas de Esgal',
             equipamento: 'Roupas leves de couro e um arco',
         },
@@ -24,6 +26,7 @@ const SKILLS_CLASSES = {
                 skillName: 'Grimorio Sagrado',
                 skillDescription: 'nivel 1~3 oferece conhecimentos de Historia e Religião'
             },
+            classType: 2,
             classDescription: 'Acólito nomeado pelo rei Bruxo para Servir nas defesas do Reino',
             equipamento: 'Armadura leve e uma maça',
         },
@@ -33,6 +36,7 @@ const SKILLS_CLASSES = {
                 skillName: 'Malandragem das Ruas',
                 skillDescription: 'nivel 1~3 oferece experiencias da vida na cidade'
             },
+            classType: 1,
             classDescription: 'Gatuno que viveu toda sua vida nos becos de Lonn',
             equipamento: 'Armadura leve e uma adaga',
         },
@@ -42,6 +46,7 @@ const SKILLS_CLASSES = {
                 skillName: 'Grimorio Sagrado',
                 skillDescription: 'nivel 1~3 oferece conhecimentos de Historia e Religião'
             },
+            classType: 3,
             classDescription: 'Antigo acólito nomeado pelo rei Bruxo para Servir nas defesas do Reino',
             equipamento: 'Roupas leves',
         },
@@ -52,6 +57,7 @@ const SKILLS_CLASSES = {
                 skillName: 'Grimorio Arcano',
                 skillDescription: 'nivel 1~3 oferece conhecimentos da Magia'
             },
+            classType: 3,
             classDescription: 'Sábio que estudou na univercidade de Lonn e obteve conhecimento Arcano',
             equipamento: 'Roupas leves e um cajado',
         },
@@ -80,7 +86,7 @@ const SKILLS_CLASSES = {
         }, {
             skilName: 'Cura',
             skillDescription: 'Super da força momentanea, mas fica cansado o resto do dia',
-            skillAtribute: 'divino'
+            skillAtribute: 'divino2'
         }, {
             skilName: 'Fortaleza',
             skillDescription: 'Aumenta a resistencia de um corpo ou objeto',
@@ -88,7 +94,7 @@ const SKILLS_CLASSES = {
         }, {
             skilName: 'Exorcismo',
             skillDescription: 'Exconjura criaturas sombrias',
-            skillAtribute: 'divino'
+            skillAtribute: 'divino2'
         }, {
             skilName: 'Terreno Divino',
             skillDescription: 'Cria uma area de Cura, afasta criaturas sombrias e insetiva falar a verdade',
@@ -104,7 +110,7 @@ const SKILLS_CLASSES = {
         }, {
             skilName: 'Ressucitar',
             skillDescription: 'Ressucita uma pessoa',
-            skillAtribute: 'divino'
+            skillAtribute: 'divino2'
         }, {
             skilName: 'Passo de Shinari',
             skillDescription: 'Movimentação de alta velocidade',
@@ -137,7 +143,7 @@ const SKILLS_CLASSES = {
         {
             skilName: 'Desfazer Magia',
             skillDescription: 'Desfaz uma magia',
-            skillAtribute: 'magico'
+            skillAtribute: 'magico2'
         }, {
             skilName: 'Dedectar magia',
             skillDescription: 'Dedecta e analiza magia',
@@ -161,83 +167,83 @@ const SKILLS_CLASSES = {
         }, {
             skilName: 'Manipular sombra',
             skillDescription: 'Manipula forma, textura e solides da sombra',
+            skillAtribute: 'magico2'
+        }, {
+            skilName: 'Manipular agua',
+            skillDescription: 'Manipula forma, textura e solides da agua',
+            skillAtribute: 'magico2'
+        }, {
+            skilName: 'Manipular fogo',
+            skillDescription: 'Manipula forma, textura e solides da fogo',
+            skillAtribute: 'magico2'
+        }, {
+            skilName: 'Campo Gravitacional',
+            skillDescription: 'Manipula a gravidade de uma area',
+            skillAtribute: 'magico2'
+        }, {
+            skilName: 'Parede de Fogo',
+            skillDescription: 'Cria uma parede de fogo',
             skillAtribute: 'magico'
-        },{
-            skilName:'Manipular agua',
-            skillDescription:'Manipula forma, textura e solides da agua',
-            skillAtribute:'magico'
-        },{
-            skilName:'Manipular fogo',
-            skillDescription:'Manipula forma, textura e solides da fogo',
-            skillAtribute:'magico'
-        },{
-            skilName:'Campo Gravitacional',
-            skillDescription:'Manipula a gravidade de uma area',
-            skillAtribute:'magico'
-        },{
-            skilName:'Parede de Fogo',
-            skillDescription:'Cria uma parede de fogo',
-            skillAtribute:'magico'
-        },{
-            skilName:'Explosão',
-            skillDescription:'Conjura uma poderosa explosão vindo dos céus',
-            skillAtribute:'magico'
-        },{
-            skilName:'Drenar Magia',
-            skillDescription:'Absorve energia magica pelo toque',
-            skillAtribute:'magico'
-        },{
-            skilName:'Nuvem Acida',
-            skillDescription:'Conjura fumaça acida',
-            skillAtribute:'magico'
-        },{
-            skilName:'Herbologia',
-            skillDescription:'1: Conhecer  2:Usar  3:Encontrar ',
-            skillAtribute:'geral'
-        },{
-            skilName:'Alquimia',
-            skillDescription:'1: p.Cura p.Mana 2:p.Fortalecimento p.Adrenalina 3:p.Acido p.fogo-vivo',
-            skillAtribute:'geral'
-        },{
-            skilName:'Engenharia',
-            skillDescription:'1:Entender   2:Replicar   3: Criar',
-            skillAtribute:'geral'
-        },{
-            skilName:'Rastreio',
-            skillDescription:'1:Achar pista   2:sentir   3:Instinto',
-            skillAtribute:'geral'
-        },{
-            skilName:'Criar Armadilha',
-            skillDescription:'1:Pequenas   2:Medias   3:Grandes',
-            skillAtribute:'geral'
-        },{
-            skilName:'Interrogatorio',
-            skillDescription:'1:Intimidação  2:Blefe  3:Confiança',
-            skillAtribute:'geral'
-        },{
-            skilName:'Roubar',
-            skillDescription:'1:Bater carteira  2:Bater Bolsa  3:Esconder Objeto',
-            skillAtribute:'geral'
-        },{
-            skilName:'Pericia em Veneno',
-            skillDescription:'1:Criar  2:Usar  3:Antidotos',
-            skillAtribute:'geral'
-        },{
-            skilName:'Nuvem de Fumaça',
-            skillDescription:'1:Ao redor(2m)  2:Ao redor(5m)  3:Arremeça(10m)',
-            skillAtribute:'geral'
-        },{
-            skilName:'Dedectar Armadilhas',
-            skillDescription:'1:Simples  2:Mecanismos  3:Magicos',
-            skillAtribute:'geral'
-        },{
-            skilName:'Invisibilidade',
-            skillDescription:'1:Parado  2:Esgueirando  3:Andando',
-            skillAtribute:'geral'
-        },{
-            skilName:'Lábia',
-            skillDescription:'1:Mentira 2:Blefe  3:Confiança',
-            skillAtribute:'geral'
+        }, {
+            skilName: 'Explosão',
+            skillDescription: 'Conjura uma poderosa explosão vindo dos céus',
+            skillAtribute: 'magico2'
+        }, {
+            skilName: 'Drenar Magia',
+            skillDescription: 'Absorve energia magica pelo toque',
+            skillAtribute: 'magico'
+        }, {
+            skilName: 'Nuvem Acida',
+            skillDescription: 'Conjura fumaça acida',
+            skillAtribute: 'magico'
+        }, {
+            skilName: 'Herbologia',
+            skillDescription: '1: Conhecer  2:Usar  3:Encontrar ',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Alquimia',
+            skillDescription: '1: p.Cura p.Mana 2:p.Fortalecimento p.Adrenalina 3:p.Acido p.fogo-vivo',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Engenharia',
+            skillDescription: '1:Entender   2:Replicar   3: Criar',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Rastreio',
+            skillDescription: '1:Achar pista   2:sentir   3:Instinto',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Criar Armadilha',
+            skillDescription: '1:Pequenas   2:Medias   3:Grandes',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Interrogatorio',
+            skillDescription: '1:Intimidação  2:Blefe  3:Confiança',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Roubar',
+            skillDescription: '1:Bater carteira  2:Bater Bolsa  3:Esconder Objeto',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Pericia em Veneno',
+            skillDescription: '1:Criar  2:Usar  3:Antidotos',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Nuvem de Fumaça',
+            skillDescription: '1:Ao redor(2m)  2:Ao redor(5m)  3:Arremeça(10m)',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Dedectar Armadilhas',
+            skillDescription: '1:Simples  2:Mecanismos  3:Magicos',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Invisibilidade',
+            skillDescription: '1:Parado  2:Esgueirando  3:Andando',
+            skillAtribute: 'geral'
+        }, {
+            skilName: 'Lábia',
+            skillDescription: '1:Mentira 2:Blefe  3:Confiança',
+            skillAtribute: 'geral'
         },
     ]
 }
