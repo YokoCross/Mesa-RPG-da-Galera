@@ -24,9 +24,14 @@ const LoginOrCreate = ({ searchingName, chosenWorld }) => {
                         type='text'
                         onChange={event => setWantedName(event.target.value)}
                     ></input>
-                    <button
-                        onClick={() => searchingName(wantedName)}
-                        className='global-button' >Buscar personagem</button>
+                    <LinkWrapper to={`/${chosenWorld}PlayerToken`}>
+                        <button
+                            onClick={() => searchingName(wantedName)}
+                            className='global-button'
+                        >
+                            Buscar personagem
+                        </button>
+                    </LinkWrapper>
 
                 </div>
 
@@ -43,7 +48,7 @@ const LoginOrCreate = ({ searchingName, chosenWorld }) => {
 }
 
 const mapStateToProps = (state) => ({
-    chosenWorld:state.charactersStore.chosenWorld
+    chosenWorld: state.charactersStore.chosenWorld
 })
 
 const mapDispatchToProps = dispatch => ({

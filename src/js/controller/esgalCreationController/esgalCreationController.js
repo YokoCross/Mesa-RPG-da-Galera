@@ -169,7 +169,7 @@ const EsgalCreationController = ({ charactersStore, classesStore, choosingName, 
                                     }
                                     return null
                                 }
-                                
+                                return null
                             })
                         }
                     </div>

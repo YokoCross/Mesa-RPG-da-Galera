@@ -9,6 +9,7 @@ import Contact from '../../view/contact/contact'
 import EsgalCreationController from '../esgalCreationController/esgalCreationController'
 import CrimmahCreation from '../../view/creationViews/crimmahCreation'
 import YggdrasilCreation from '../../view/creationViews/yggdrasilCreation'
+import EsgalPlayerToken from '../../view/EsgalPlayerToken/EsgalPlayerToken'
 
 class HomeControler extends Component {
     render() {
@@ -48,6 +49,11 @@ class HomeControler extends Component {
                     exact
                     path={urls.yggdrasilCreation.path}
                     render={() => <YggdrasilCreation />}
+                />
+                <Route
+                    exact
+                    path={urls.esgalPlayerToken.path}
+                    render={() => <EsgalPlayerToken />}
                 />
 
             </div>

@@ -1,6 +1,6 @@
 //Font Imports
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 //Colors
 $color-one:#222222;
 $color-two:#ffffffee;
@@ -8,7 +8,8 @@ $color-two:#ffffffee;
 //Fonts
 $font-one:'Montserrat',
 sans-serif;
-
+$font-two: 'Marck Script',
+cursive;
 //Responsive min-values
 $screen-tablet:500px;
 $screen-computer: 800px;
@@ -46,11 +47,11 @@ $screen-computer: 800px;
     padding: 2rem 0;
 }
 
-.global-label{
+.global-label {
     font-family: $font-one;
 }
 
-.global-input{
+.global-input {
     font-family: $font-one;
     height: 2rem;
     min-width: 15rem;
@@ -59,21 +60,21 @@ $screen-computer: 800px;
     font-size: 1.5rem;
 }
 
-.global-button{
+.global-button {
     font-family: $font-one;
     height: 2rem;
     margin-top: 1.5rem;
     padding: 0 2rem;
 }
 
-.global-button:hover{
-    color:#f19224;
+.global-button:hover {
+    color: #f19224;
 }
 
-.global-button:focus{
+.global-button:focus {
     outline: none;
 }
 
-.global-button:active{
+.global-button:active {
     transform: scale(1.05);
 }

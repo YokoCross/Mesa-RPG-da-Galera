@@ -6,4 +6,5 @@ export const urls = {
     esgalCreation: { name: 'esgalCreation', path: '/esgalCreation' },
     crimmahCreation: { name: 'crimmahCreation', path: '/crimmahCreation' },
     yggdrasilCreation: { name: 'yggdrasilCreation', path: '/yggdrasilCreation' },
+    esgalPlayerToken: { name: 'esgalPlayerToken', path: '/esgalPlayerToken' },
 };
