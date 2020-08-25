@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
 import { urls } from '../../utils/urls/urls'
-import ThemeButtons from '../../view/themesButtons/themeButtons'
-import LoginOrCreate from '../../view/loginOrCreate/loginOrCreate'
-import History from '../../view/history/history'
-import Contact from '../../view/contact/contact'
+import ThemeButtons from '../../pages/themesButtons/themeButtons'
+import LoginOrCreate from '../../pages/loginOrCreate/loginOrCreate'
+import History from '../../pages/history/history'
+import Contact from '../../pages/contact/contact'
 import EsgalCreationController from '../esgalCreationController/esgalCreationController'
-import CrimmahCreation from '../../view/creationViews/crimmahCreation'
-import YggdrasilCreation from '../../view/creationViews/yggdrasilCreation'
-import EsgalPlayerToken from '../../view/EsgalPlayerToken/EsgalPlayerToken'
+import CrimmahCreation from '../../pages/creationViews/crimmahCreation'
+import YggdrasilCreation from '../../pages/creationViews/yggdrasilCreation'
+import EsgalPlayerToken from '../../pages/EsgalPlayerToken/EsgalPlayerToken'
 
 class HomeControler extends Component {
     render() {
