@@ -19,6 +19,15 @@ const CHARATERS_STATE = {
 }
 
 export default function charatersStore(state = CHARATERS_STATE, action) {
+    ///implementar troca de ifs por switch
+    switch (action.type) {
+        case value:
+            
+            break;
+    
+        default:
+            break;
+    }
 
     if (action.type === 'CHANGING_WORLD') {
         return { ...state, chosenWorld: action.world }
