@@ -139,7 +139,7 @@ const EsgalCreationController = ({ charactersStore, classesStore, choosingName, 
                                     }
                                     return null
                                 }
-                                if(charactersStore.characterCreated.class.class === 'Monje'){
+                                if(charactersStore.characterCreated.class.class === 'Monge'){
                                     if(skill.skillAtribute === 'fisico' || skill.skillAtribute === 'divino' || skill.skillAtribute === 'geral'){
                                         return (
                                             <button

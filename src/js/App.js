@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '../css/styles.css'
-import Header from './view/header/header'
+import Header from './pages/header/header'
 import HomeControler from './controller/homeControler/homeControler'
 
 function App() {
