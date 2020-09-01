@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import * as CourseActions from '../../store/actions/characterActions'
 
@@ -188,18 +189,9 @@ const mapStateToProps = (state) => ({
     charactersStore: state.charactersStore,
 })
 
-const mapDispatchToProps = dispatch => ({
-    choosingRace: (event, name) =>
-        dispatch(CourseActions.choosingRace(event, name)),
+const mapDispatchToProps = dispatch => (
 
-    choosingClass: (event, value) =>
-        dispatch(CourseActions.choosingClass(event, value)),
-
-    choosingSkills: (event, value) =>
-        dispatch(CourseActions.choosingSkills(event, value)),
-
-    choosingName: name =>
-        dispatch(CourseActions.choosingName(name)),
-})
+    bindActionCreators(CourseActions, dispatch)
+)
 
 export default connect(mapStateToProps, mapDispatchToProps)(EsgalCreationController)
